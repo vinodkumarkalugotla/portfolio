@@ -2,12 +2,12 @@ name: Deploy HTML Portfolio
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, dev]
 
 jobs:
   deploy-preview:
     name: Deploy Preview
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
